@@ -1,8 +1,6 @@
 import { useCallback, useState } from "react";
 import { Alert } from "react-native";
-
-const API_URL =
-  "https://react-native-transaction-express-server.onrender.com/api/v1";
+import { API_URL } from "../constants/api";
 
 export const useTransactions = (userId) => {
   const [transactions, setTransactions] = useState([]);
@@ -15,7 +13,9 @@ export const useTransactions = (userId) => {
 
   const fetchTransactions = useCallback(async () => {
     try {
-      const response = await fetch(`${API_URL}/transactions/user/${userId}`);
+      const response = await fetch(`${API_URL}/transactions/user/${userId}`, {
+        method: "GET",
+      });
 
       const data = await response.json();
 
@@ -30,7 +30,10 @@ export const useTransactions = (userId) => {
   const fetchSummary = useCallback(async () => {
     try {
       const response = await fetch(
-        `${API_URL}/transactions/summary/user/${userId}`
+        `${API_URL}/transactions/summary/user/${userId}`,
+        {
+          method: "GET",
+        }
       );
 
       const data = await response.json();
@@ -58,7 +61,10 @@ export const useTransactions = (userId) => {
   const deleteTransaction = async (id) => {
     try {
       const response = await fetch(
-        `${API_URL}/transactions/user/${userId}/${id}`
+        `${API_URL}/transactions/user/${userId}/${id}`,
+        {
+          method: "DELETE",
+        }
       );
 
       if (!response.ok) throw new Error("Failed to delete transaction");
