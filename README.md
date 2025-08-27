@@ -1,50 +1,67 @@
-# Welcome to your Expo app 👋
+# Transaction Tracker - React Native App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A simple React Native app built with Expo to track personal expenses and income, designed as a practice project to build skills in React Native development. Uses Clerk for user authentication.
 
-## Get started
+## ✨ Features
 
-1. Install dependencies
+- 📱 **React Native with Expo** - Cross-platform mobile app development
+- 🔐 **Clerk Authentication** - Secure user sign-up, login, and session management
+- 💸 **Transaction Tracking** - Add, view, and categorize expenses and income
+- 🖥️ **Simple UI** - Clean and intuitive interface for managing transactions
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ installed
+- Expo CLI: `npm install -g expo-cli`
+- Expo Go app (for mobile testing)
+
+### Installation
+
+1. Clone or download this repository
+2. Install dependencies:
 
    ```bash
    npm install
    ```
 
-2. Start the app
+3. Configure Clerk:
+   - Set up a Clerk account at [clerk.com](https://clerk.com)
+   - Add your Clerk API keys to a `.env` file (see `.env.example`)
+
+4. Start the development server:
 
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+5. Scan the QR code with the Expo Go app or run on an emulator
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🛠 Available Scripts
 
-## Get a fresh project
+- `npm start` - Start Expo development server
+- `npm run android` - Run on Android emulator
+- `npm run ios` - Run on iOS simulator
+- `npm run web` - Run in browser (if supported)
 
-When you're ready, run:
+## 📦 Customization
+
+- **Styling**: Uses React Native's StyleSheet or your preferred styling library
+- **Clerk Auth**: Customize auth flows in `components/auth`
+- **Transaction Logic**: Edit `screens/Transactions.tsx` for custom features
+
+## 🚀 Deployment
+
+Build the app using Expo EAS:
 
 ```bash
-npm run reset-project
+eas build
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Follow Expo's documentation for submitting to App Store or Google Play.
 
-## Learn more
+## 📄 License
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+MIT License
